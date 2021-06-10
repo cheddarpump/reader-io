@@ -7,5 +7,13 @@ import { ThemeService } from './services/theme.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(public themeService: ThemeService) {}
+  constructor(public themeService: ThemeService) {
+    this.themeService.LightThemeObservable.subscribe((lightTheme) => {
+      if (!lightTheme) {
+        document.documentElement.classList.add('dark-background');
+      } else {
+        document.documentElement.classList.remove('dark-background');
+      }
+    });
+  }
 }
