@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <h1 class="mat-h1">ReaderIO</h1>
+  <button
+    mat-icon-button
+    *ngIf="themeService.LightTheme"
+    (click)="toggleTheme(false)"
+  >
+    <mat-icon aria-hidden="false" aria-label="Set to dark mode"
+      >dark_mode</mat-icon
+    >
+  </button>
+  <button
+    mat-icon-button
+    *ngIf="!themeService.LightTheme"
+    (click)="toggleTheme(true)"
+  >
+    <mat-icon aria-hidden="false" aria-label="Set to light mode"
+      >light_mode</mat-icon
+    >
+  </button>
+</mat-toolbar>

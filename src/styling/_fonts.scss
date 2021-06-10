@@ -1,3 +1,5 @@
+@use '~@angular/material' as mat;
+
 @font-face {
   font-family: "PT Sans";
   src: url("../../src/assets/fonts/pt-sans/PTSans-Regular.ttf")
@@ -56,3 +58,7 @@
   font-weight: bold;
   font-style: italic;
 }
+
+$main-typography: mat.define-typography-config(
+  $font-family: "PT Serif, PT Sans",
+);
