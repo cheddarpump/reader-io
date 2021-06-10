@@ -10,9 +10,9 @@ export class AppComponent {
   constructor(public themeService: ThemeService) {
     this.themeService.LightThemeObservable.subscribe((lightTheme) => {
       if (!lightTheme) {
-        document.documentElement.classList.add('dark-background');
+        document.documentElement.classList.add('dark-theme');
       } else {
-        document.documentElement.classList.remove('dark-background');
+        document.documentElement.classList.remove('dark-theme');
       }
     });
   }
