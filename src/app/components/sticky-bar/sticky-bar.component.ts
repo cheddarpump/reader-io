@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
-  selector: 'rio-toolbar',
-  templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.scss'],
+  selector: 'rio-sticky-bar',
+  templateUrl: './sticky-bar.component.html',
+  styleUrls: ['./sticky-bar.component.scss'],
 })
-export class ToolbarComponent implements OnInit {
+export class StickyBarComponent implements OnInit {
   constructor(public themeService: ThemeService) {}
 
   ngOnInit(): void {}
