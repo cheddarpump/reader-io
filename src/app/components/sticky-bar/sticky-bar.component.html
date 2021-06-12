@@ -1,20 +1,26 @@
 <mat-toolbar class="sticky-bar" color="primary">
-  <button
-    mat-icon-button
-    *ngIf="themeService.LightTheme"
-    (click)="toggleTheme(false)"
-  >
-    <mat-icon aria-hidden="false" aria-label="Set to dark mode"
-      >dark_mode</mat-icon
-    >
+  <button mat-stroked-button class="sticky-bar__button">
+    <div class="sticky-bar__button-wrapper">
+      <mat-icon> home </mat-icon>
+      <span>Home</span>
+    </div>
   </button>
-  <button
-    mat-icon-button
-    *ngIf="!themeService.LightTheme"
-    (click)="toggleTheme(true)"
-  >
-    <mat-icon aria-hidden="false" aria-label="Set to light mode"
-      >light_mode</mat-icon
-    >
+  <button mat-stroked-button class="sticky-bar__button">
+    <div class="sticky-bar__button-wrapper">
+      <mat-icon> library_books </mat-icon>
+      <span>Library</span>
+    </div>
+  </button>
+  <button mat-stroked-button class="sticky-bar__button">
+    <div class="sticky-bar__button-wrapper">
+      <mat-icon>sell</mat-icon>
+      <span>Wishlist</span>
+    </div>
+  </button>
+  <button mat-stroked-button class="sticky-bar__button">
+    <div class="sticky-bar__button-wrapper">
+      <mat-icon> book </mat-icon>
+      <span>Currently Reading</span>
+    </div>
   </button>
 </mat-toolbar>

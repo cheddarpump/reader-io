@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'rio-header',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  constructor(public themeService: ThemeService) {}
 
   ngOnInit(): void {}
+  toggleTheme(themeVal: boolean): void {
+    this.themeService.toggleTheme(themeVal);
+  }
 }
